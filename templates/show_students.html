@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Students</title>
+    <script>
+        // Function to refresh the page content every 30 seconds
+        setInterval(function() {
+            location.reload();
+        }, 30000); // Refresh every 30 seconds (30000 milliseconds)
+    </script>
+</head>
+<body>
+    <h1>Students Details</h1>
+    <p>Total Students: {{ total_students }}</p>
+    <p>Total Money Received: {{ total_money }}</p>
+    <p>Total Online Students: {{ total_online_students }}</p>
+    <p>Total Online Money Received: {{ total_online_money }}</p>
+    <p>Total Offline Students: {{ total_offline_students }}</p>
+    <p>Total Offline Money Received: {{ total_offline_money }}</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Payment Mode</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.country }}</td>
+                <td>{{ student.payment_mode }}</td>
+                <td>{{ student.amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

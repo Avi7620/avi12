@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Details</title>
+</head>
+<body>
+    <h1>Add Student Details</h1>
+    <form method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" required><br>
+        <label for="payment_mode">Payment Mode:</label><br>
+        <select id="payment_mode" name="payment_mode" required>
+            <option value="offline">Offline</option>
+            <option value="online">Online</option>
+        </select><br>
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="amount" name="amount" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
